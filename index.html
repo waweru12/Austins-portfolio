@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css ">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+    <title>Document</title>
+    
+</head>
+
+<body>
+
+    <div class="background ">
+
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">PROJECTS</a>
+            <a class="d" href="#">CONTACT</a>
+        </div>
+
+        <div class="content">
+
+            <div class="home">
+                <h1> Austin Waweru</h1>
+                <h3>Software developer</h3>
+            </div>
+
+            <div class="aboutme">
+
+                <h4>Who Am I?</h4><br>
+                <p>I’m a fullstack developer and . I  have specialized in web design, front end development, back end development and user experience.<br> 
+                Aside from coding  you'll find me watching movies,hanging out with my pals or gaming also a philosophical human<br>
+                who's very adventurous.I love nature the beautiful landscapes and sunsets.just the beauty of nature.<br>
+                I’m constantly learning web technologies and other design related topics, currently playing around with<br>
+                Javascript and Python. I’m a skilled in many areas of design and development.<br>
+                Wanna work together? </p>
+            </div>
+
+            <div class="contact">
+                <div class="contactform">
+                    <form action="https://formspree.io/austinwaweru12@gmail.com" method="POST">
+                        <label>
+                            E-mail
+                            <input type="email" name=" email" class="email" />
+                        </label>
+                        <label>
+                            Subject
+                            <input type="text" name="subject" class="subject">
+                        </label>
+                        <label>
+                            Message
+                            <textarea name="message" class="message"></textarea>
+                        </label>
+                        <div class="status">
+
+                        </div>
+                        <button type="submit" class="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.a').click(function () {
+                //    alert("i am click");
+                var selected = $(this);
+                $('.a').removeClass('.active');
+                $(selected).addClass('active');
+            });
+
+            var $a = $('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $home = $('.home'),
+                $aboutme = $('.aboutme'),
+                $projects = $('.projects'),
+                $contact = $('.contact');
+
+            $a.click(function () {
+                $home.fadeIn();
+                $aboutme.fadeOut();
+                $projects.fadeOut();
+                $contact.fadeOut();
+            });
+            $b.click(function () {
+                $aboutme.fadeIn();
+                $home.fadeOut();
+                $projects.fadeOut();
+                $contact.fadeOut();
+
+            });
+
+            $c.click(function () {
+                $projects.fadeIn();
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $contact.fadeOut();
+            });
+
+            $d.click(function () {
+                $contact.fadeIn();
+                $home.fadeOut();
+                $projects.fadeOut();
+                $aboutme.fadeOut();
+            });
+
+        });
+    </script>
+      <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+      <script src="/main.js"></script>
+
+
+
+</body>
+
+</html>
